@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/BahasKoding/Portfolio-TailwindCSS#readme",
   "devDependencies": {
+    "prettier": "^3.1.1",
+    "prettier-plugin-tailwindcss": "^0.5.9",
     "tailwindcss": "^3.3.6"
   }
 }
