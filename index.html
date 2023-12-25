@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio 🔷 Rai</title>
-    <!-- Belum di minify -->
+    <!-- TailwindCSS yg belum di minify -->
     <!-- <link rel="stylesheet" href="dist/output.css" /> -->
 
-    <!-- yg udh di minify -->
+    <!-- TailwindCSS yg udh di minify -->
     <link rel="stylesheet" href="dist/css/final.css" />
 
+    <!-- AOS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Script DarkMode TailwindCSS -->
     <script>
       // On page load or when changing themes, best to add inline in `head` to avoid FOUC
       if (localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
@@ -18,10 +22,11 @@
         document.documentElement.classList.remove("dark");
       }
     </script>
+
   </head>
   <body>
     <!-- Header Section Start -->
-    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10" data-aos="fade-down">
       <div class="container">
         <div class="flex items-center justify-between relative">
           <div class="px-4">
@@ -48,7 +53,7 @@
                   <a href="#portofolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Portofolio</a>
                 </li>
                 <li class="group">
-                  <a href="#gallery" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Galeri</a>
+                  <a href="#sertifikat" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Sertifikat</a>
                 </li>
                 <li class="group">
                   <a href="#blog" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Blog</a>
@@ -78,9 +83,10 @@
 
     <!-- Hero Section Start -->
     <section id="home" class="pt-36 lg:pt-10 dark:bg-dark">
-      <div class="container border-b dark:border-b-slate-500">
+      <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full self-center px-4 lg:w-1/2">
+          <!-- Text Hero Section -->
+          <div class="w-full self-center px-4 lg:w-1/2" data-aos="fade-right" data-aos-delay="100">
             <h1 class="text-base font-semibold text-primary md:text-xl">
               Hello Yall 👋, Saya
               <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl dark:text-white"> Rai Rakhmat Syarifudin S. </span>
@@ -88,10 +94,11 @@
             <h2 class="font-medium text-secondary text-lg mb-2 lg:text-2xl dark:text-slate-200">
               Student 🔷 <span class="text-slate-700 dark:text-slate-200">Web Developer</span> 🔷 <span class="text-dark dark:text-white">Content Creator</span>
             </h2>
-            <p class="font-medium text-secondary mb-5 leading-relaxed">Salam kenal! Saya Rai Rakhmat, seorang Mahasiswa yang juga aktif sebagai Web Developer dan Content Creator</p>
+            <p class="font-medium text-secondary mb-5 leading-relaxed">Salam kenal! Saya Rai, seorang Mahasiswa yang juga aktif sebagai Web Developer dan Content Creator</p>
             <a href="#contact" class="text-base font-semibold text-neutral-800 dark:text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"> Hubungi Kami </a>
           </div>
-          <div class="w-full self-end px-4 lg:w-1/2">
+          <!-- IMG Hero Section -->
+          <div class="w-full self-end px-4 lg:w-1/2 border-b border-slate-200 dark:border-b-slate-500" data-aos="fade-up-left" data-aos-delay="200">
             <div class="relative mt-10 lg:mt-9 lg:right-0">
               <img src="dist/img/raiblob.png" alt="Rai" class="max-w-full mx-auto" />
             </div>
@@ -106,25 +113,34 @@
     <section id="about" class="pt-36 pb-32 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full px-4 mb-10 lg:w-1/2">
-            <h4 class="font-bold uppercase text-primary text-xl mb-3">Tentang Saya</h4>
-            <h2 class="font-bold text-dark text-3xl mb-5 max-w-xl lg:text-4xl dark:text-white">Riwayat Pendidikan</h2>
+          <!-- Tentang Saya | Riwayat Pendidikan -->
+          <div class="w-full px-4 mb-10 lg:w-1/2" data-aos-easing="ease-in-out">
+            <h4 class="font-bold uppercase text-primary text-xl mb-3" data-aos="fade-right" data-aos-delay="100">Tentang Saya</h4>
+            <h2 class="font-bold text-dark text-3xl mb-5 max-w-xl lg:text-4xl dark:text-white" data-aos="fade-right" data-aos-delay="200">Riwayat Pendidikan</h2>
             <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">
-              <span class="font-bold dark:text-slate-400">⚫ Universitas Bung Karno</span><br />
-              <span class="ml-8">Sistem Informasi | 2023 - sekarang</span>
+              <span class="font-bold dark:text-slate-400" data-aos="fade-right" data-aos-delay="300">⚫ Universitas Bung Karno</span><br />
+              <span class="ml-8" data-aos="fade-right" data-aos-delay="400">Sistem Informasi | 2023 - sekarang</span>
             </p>
             <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">
-              <span class="font-bold dark:text-slate-400">⚫ SMK Negeri 1 Cibinong</span><br />
-              <span class="ml-8">Rekayasa Perangkat Lunak | 2020 - 2023</span>
+              <span class="font-bold dark:text-slate-400" data-aos="fade-right" data-aos-delay="300">⚫ SMK Negeri 1 Cibinong</span><br />
+              <span class="ml-8" data-aos="fade-right" data-aos-delay="400">Rekayasa Perangkat Lunak | 2020 - 2023</span>
             </p>
           </div>
-          <div class="w-full px-4 lg:w-1/2">
-            <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white">Mari berteman!</h3>
-            <p class="font-medium text-base text-secondary mb-6 lg:text-lg">Saya Aktif di beberapa social media yang kalian bisa cek dibawah ini <br />👇 jangan lupa di follow yah 😉</p>
+
+          <!-- Mari Berteman -->
+          <div class="w-full px-4 lg:w-1/2" data-aos-easing="ease-in-out">
+            <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white" data-aos="fade-right" data-aos-delay="500">Mari berteman!</h3>
+            <p class="font-medium text-base text-secondary mb-6 lg:text-lg" data-aos="fade-right" data-aos-delay="600">Saya Aktif di beberapa social media yang kalian bisa cek dibawah ini <br />👇 jangan lupa di follow yah 😉</p>
             <!-- Social Media Account -->
             <div class="flex items-center">
               <!-- Twitter Icon -->
-              <a href="https://twitter.com/bahaskoding" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+              <a
+                data-aos="flip-left"
+                data-aos-delay="650"
+                href="https://twitter.com/bahaskoding"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
                 <svg role="img" class="fill-current" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>X</title>
                   <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
@@ -132,7 +148,13 @@
               </a>
 
               <!-- Youtube Icon -->
-              <a href="https://youtube.com/@bahaskoding" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+              <a
+                data-aos="flip-left"
+                data-aos-delay="700"
+                href="https://youtube.com/@bahaskoding"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
                 <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>YouTube</title>
                   <path
@@ -142,7 +164,13 @@
               </a>
 
               <!-- Instagram Icon -->
-              <a href="https://instagram.com/bahaskoding" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+              <a
+                data-aos="flip-left"
+                data-aos-delay="750"
+                href="https://instagram.com/bahaskoding"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
                 <svg role="img" class="fill-current" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>Instagram</title>
                   <path
@@ -151,7 +179,13 @@
                 </svg>
               </a>
               <!-- Tittok Icon -->
-              <a href="https://tiktok.com/@bahaskoding" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+              <a
+                data-aos="flip-left"
+                data-aos-delay="800"
+                href="https://tiktok.com/@bahaskoding"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
                 <svg role="img" class="fill-current" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>TikTok</title>
                   <path
@@ -161,7 +195,13 @@
               </a>
 
               <!-- Github Icon -->
-              <a href="https://github.com/bahaskoding" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+              <a
+                data-aos="flip-left"
+                data-aos-delay="850"
+                href="https://github.com/bahaskoding"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+              >
                 <svg role="img" class="fill-current" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <title>GitHub</title>
                   <path
@@ -179,77 +219,108 @@
     <!-- Portofolio Section Start -->
     <section id="portofolio" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
       <div class="container">
+        <!-- Tittle Portfolio -->
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-3xl text-primary mb-2">Portofolio</h4>
-            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Project Terbaru</h2>
-            <p class="font-medium text-md text-secondary md:text-lg">Berikut ini adalah beberapa project yang pernah saya kerjakan</p>
+            <h4 class="font-semibold text-3xl text-primary mb-2" data-aos="fade-down" data-aos-delay="100">Portofolio</h4>
+            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white" data-aos="fade-down" data-aos-delay="200">Project Terbaru</h2>
+            <p class="font-medium text-md text-secondary md:text-lg" data-aos="fade-down" data-aos-delay="300">Berikut ini adalah beberapa project yang pernah saya kerjakan</p>
           </div>
         </div>
+        <!-- Card -->
         <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
+          <div class="mb-12 p-4 md:w-1/2" data-aos-delay="100" data-aos-offset="400">
+            <div class="rounded-md shadow-md overflow-hidden" data-aos="flip-left" data-aos-delay="100">
               <img src="dist/img/portofolio/instagram-personal-branding.png" alt="Personal Brand" width="w-full" />
             </div>
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Personal Brand | Social Media</h3>
-            <p class="font-medium text-base text-secondary">
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white" data-aos="fade-right">Personal Brand | Social Media</h3>
+            <p class="font-medium text-base text-secondary" data-aos="fade-right" data-aos-delay="200">
               Saya membangun personal brand lewat social media di instagram di bulan Juli 2023 sampai saat ini. akun instagram saya adalah
               <a href="https://instagram.com/bahaskoding" target="_blank" class="text-dark hover:text-primary dark:hover:text-primary dark:text-slate-400">@bahaskoding</a> yang bisa kalian lihat
               <!-- <a href="https://www.instagram.com/p/CwNAct2MCRX/" target="_blank" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:text-white"> Extension di VS Code Part 1</a> -->
             </p>
           </div>
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
+          <div class="mb-12 p-4 md:w-1/2" data-aos-delay="200" data-aos-offset="400">
+            <div class="rounded-md shadow-md overflow-hidden" data-aos="flip-left" data-aos-delay="200">
               <img src="dist/img/portofolio/bootstrap5.png" alt="Landing Page" width="w-full" />
             </div>
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Landing Page</h3>
-            <p class="font-medium text-base text-secondary">Saya mendevelop website landing page sederhana menggunakan Framework Bootstrap 5</p>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white" data-aos="fade-right">Landing Page</h3>
+            <p class="font-medium text-base text-secondary" data-aos="fade-right" data-aos-delay="200">Saya mendevelop website landing page sederhana menggunakan Framework Bootstrap 5</p>
           </div>
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
+          <div class="mb-12 p-4 md:w-1/2" data-aos-delay="200" data-aos-offset="400">
+            <div class="rounded-md shadow-md overflow-hidden" data-aos="flip-left" data-aos-delay="100">
               <img src="dist/img/portofolio/inventaris-buku.png" alt="Inventaris Buku Perpustakaan" width="w-full" />
             </div>
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Inventaris Buku Perpustakaan</h3>
-            <p class="font-medium text-base text-secondary">Saat saya PKL, saya membangun sebuah aplikasi inventaris perpustakaan menggunakan Laravel 9</p>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white" data-aos="fade-right">Inventaris Buku Perpustakaan</h3>
+            <p class="font-medium text-base text-secondary" data-aos="fade-right" data-aos-delay="200">Saat saya PKL, saya membangun sebuah aplikasi inventaris perpustakaan menggunakan Laravel 9</p>
           </div>
-          <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
+          <div class="mb-12 p-4 md:w-1/2" data-aos-delay="200" data-aos-offset="400">
+            <div class="rounded-md shadow-md overflow-hidden" data-aos="flip-left" data-aos-delay="200">
               <img src="dist/img/portofolio/laract-penilaian-siswa.png" alt="Project 4" width="w-full" />
             </div>
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white">Aplikasi Penilaian Siswa</h3>
-            <p class="font-medium text-base text-secondary">Untuk syarat kelulusan SMK, saya membangun aplikasi sederhana untuk menilai para siswa menggunakan Laravel beserta ReactJS</p>
+            <h3 class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white" data-aos="fade-right">Aplikasi Penilaian Siswa</h3>
+            <p class="font-medium text-base text-secondary" data-aos="fade-right" data-aos-delay="200">Untuk syarat kelulusan SMK, saya membangun aplikasi sederhana untuk menilai para siswa menggunakan Laravel beserta ReactJS</p>
           </div>
+          <!-- End Card -->
         </div>
       </div>
     </section>
     <!-- Portofolio Section End -->
 
-    <!-- Gallery Section Start -->
-    <section id="gallery" class="pt-36 pb-32 bg-slate-800 dark:bg-slate-300">
+    <!-- Sertifikat Section Start -->
+    <section id="sertifikat" class="pt-36 pb-32 bg-slate-800 dark:bg-slate-300">
       <div class="container">
+        <!-- Tittle Gallery -->
         <div class="w-full px-4">
           <div class="mx-auto text-center mb-16">
-            <h4 class="font-semibold text-3xl text-primary mb-2">Galeri</h4>
-            <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-dark">Kegiatan Tahunan</h2>
-            <p class="font-medium text-md text-secondary md:text-lg">Berikut ini adalah kegiatan tiap tahun yang saya ikuti</p>
+            <h4 class="font-semibold text-3xl text-primary mb-2" data-aos="fade-down" data-aos-delay="100">Sertifikat</h4>
+            <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-dark" data-aos="fade-down" data-aos-delay="200">Yang Dimiliki</h2>
+            <!-- <p class="font-medium text-md text-secondary md:text-lg" data-aos="fade-down" data-aos-delay="300">Berikut ini adalah kegiatan tiap tahun yang saya ikuti</p> -->
           </div>
         </div>
-        <div class="w-full px-4">
+        <!-- End Tittle Galery -->
+
+        <!-- Isi Gallery -->
+        <!-- <div class="w-full px-4">
           <div class="flex flex-wrap items-center justify-center">
-            <a href="" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+            <a href="#" data-aos="zoom-in" data-aos-delay="100" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
               <img src="dist/img/galeri/bcb.jpg" alt="BCB Logo" />
             </a>
-            <a href="" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+            <a href="#" data-aos="zoom-in" data-aos-delay="400" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
               <img src="dist/img/galeri/hwo.jpg" alt="HWO Logo" />
             </a>
-            <a href="" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+            <a href="#" data-aos="zoom-in" data-aos-delay="100" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
               <img src="dist/img/galeri/ca.jpg" alt="Akre Logo" />
             </a>
           </div>
+        </div> -->
+        <!-- End Isi Gallery -->
+
+        <!-- Project Portofolio 2x2 (Kostumisasi) -->
+        <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
+          <div class="mb-12 p-4 md:w-1/2" data-aos-delay="100" data-aos-offset="400">
+            <div class="rounded-md shadow-md overflow-hidden grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100" data-aos="zoom-in" data-aos-delay="100">
+              <img src="dist/img/sertifikat/BNSP.png" alt="Sertifikat BNSP" width="w-full" />
+            </div>
+            <h3 class="font-semibold text-xl text-center dark:text-dark mt-5 mb-3 text-white" data-aos="zoom-in">Sertifikat | BNSP</h3>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2" data-aos-delay="200" data-aos-offset="400">
+            <div class="rounded-md shadow-md overflow-hidden grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100" data-aos="zoom-in" data-aos-delay="300">
+              <img src="dist/img/sertifikat/Akademi_kreator.png" alt="Sertifikat Akademi Kreator" width="w-full" />
+            </div>
+            <h3 class="font-semibold text-xl text-center dark:text-dark mt-5 mb-3 text-white" data-aos="zoom-in">Sertifikat | Akademi Kreator</h3>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2" data-aos-delay="200" data-aos-offset="400">
+            <div class="rounded-md shadow-md overflow-hidden grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100" data-aos="zoom-in" data-aos-delay="100">
+              <img src="dist/img/sertifikat/Coursera.png" alt="Sertifikat Coursera" width="w-full" />
+            </div>
+            <h3 class="font-semibold text-xl text-center dark:text-dark mt-5 mb-3 text-white" data-aos="zoom-in">Sertifikat | Coursera <h3>
+          </div>
         </div>
+        <!-- End Project Portofolio 2x2 (Kostumisasi) -->
       </div>
     </section>
-    <!-- Gallery Section End -->
+    <!-- Sertifikat Section End -->
 
     <!-- Blog Section Start -->
     <section id="blog" class="pt-36 pb-32 bg-slate-100 dark:bg-slate-800">
@@ -257,15 +328,18 @@
         <div class="w-full px-4">
           <!-- Judul -->
           <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-3xl text-primary mb-2">Blog</h4>
-            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Konten Viral</h2>
-            <p class="font-medium text-md text-secondary md:text-lg">Berikut ini adalah beberapa konten saya di instagram yang sudah menyentuh angka 50k+ views!</p>
+            <h4 class="font-semibold text-3xl text-primary mb-2" data-aos="fade-down">Blog</h4>
+            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white" data-aos="fade-down">Konten Viral</h2>
+            <p class="font-medium text-md text-secondary md:text-lg" data-aos="fade-down">Berikut ini adalah beberapa konten saya di instagram yang sudah menyentuh angka 50k+ views!</p>
           </div>
+          <!-- End Judul -->
+
           <!-- Konten/Isi Blog -->
           <div class="flex flex-wrap">
-            <div class="w-full px-4 lg:1/2 xl:w-1/3">
+            <!-- Card -->
+            <div class="w-full px-4 lg:1/2 xl:w-1/3" data-aos="fade-right">
               <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-700">
-                <img src="dist/img/konten viral/VScode Pet.jpg" alt="Programming" class="w-full" />
+                <img src="dist/img/konten_viral/VScode-Pet.jpg" alt="VSC Pet" class="w-full" />
                 <div class="py-8 px-6">
                   <h3>
                     <a href="https://www.instagram.com/p/CwNAct2MCRX/" target="_blank" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:hover:text-primary dark:text-white"> Extension di VS Code Part 1</a>
@@ -275,23 +349,9 @@
                 </div>
               </div>
             </div>
-            <div class="w-full px-4 lg:1/2 xl:w-1/3">
+            <div class="w-full px-4 lg:1/2 xl:w-1/3" data-aos="zoom-out">
               <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-700">
-                <img src="dist/img/konten viral/Doki theme.jpg" alt="Programming" class="w-full" />
-                <div class="py-8 px-6">
-                  <h3>
-                    <a href="https://www.instagram.com/reel/Cx-QDxRroRs/" target="_blank" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:hover:text-primary dark:text-white">
-                      Extension di VS Code Part 2</a
-                    >
-                  </h3>
-                  <p class="font-medium text-base mb-6 text-secondary dark:text-slate-300">Pada konten yang saya upload konten yang menampilkan extension yang bernama Doki Theme dan mendapatkan views diatas 61k+</p>
-                  <a href="https://www.instagram.com/reel/Cx-QDxRroRs/" target="_blank" class="font-medium text-sm bg-primary py-2 px-4 rounded-lg hover:opacity-80 dark:hover:opacity-80 dark:text-white"> Klik untuk melihat </a>
-                </div>
-              </div>
-            </div>
-            <div class="w-full px-4 lg:1/2 xl:w-1/3">
-              <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-700">
-                <img src="dist/img/konten viral/web khusus web dev.jpg" alt="Keyboard" class="w-full" />
+                <img src="dist/img/konten_viral/web-khusus-web-dev.jpg" alt="Review 3 Website" class="w-full" />
                 <div class="py-8 px-6">
                   <h3>
                     <a href="https://www.instagram.com/reel/CzQoVPirWef/" target="_blank" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:hover:text-primary dark:text-white"> Review 3 Website </a>
@@ -303,7 +363,23 @@
                 </div>
               </div>
             </div>
+            <div class="w-full px-4 lg:1/2 xl:w-1/3" data-aos="fade-left">
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 dark:bg-slate-700">
+                <img src="dist/img/konten_viral/Doki-theme.jpg" alt="Doki Theme" class="w-full" />
+                <div class="py-8 px-6">
+                  <h3>
+                    <a href="https://www.instagram.com/reel/Cx-QDxRroRs/" target="_blank" class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate dark:hover:text-primary dark:text-white">
+                      Extension di VS Code Part 3</a
+                    >
+                  </h3>
+                  <p class="font-medium text-base mb-6 text-secondary dark:text-slate-300">Pada konten yang saya upload konten yang menampilkan extension yang bernama Doki Theme dan mendapatkan views diatas 61k+</p>
+                  <a href="https://www.instagram.com/reel/Cx-QDxRroRs/" target="_blank" class="font-medium text-sm bg-primary py-2 px-4 rounded-lg hover:opacity-80 dark:hover:opacity-80 dark:text-white"> Klik untuk melihat </a>
+                </div>
+              </div>
+            </div>
+            <!-- End Card -->
           </div>
+          <!-- End Konten/Isi Blog -->
         </div>
       </div>
     </section>
@@ -315,9 +391,9 @@
         <!-- Judul -->
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-3xl text-primary mb-2">Kontak</h4>
-            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Hubungi Kami !</h2>
-            <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, ex quibusdam!</p>
+            <h4 class="font-semibold text-3xl text-primary mb-2" data-aos="fade-down">Kontak</h4>
+            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white" data-aos="fade-down">Hubungi Kami !</h2>
+            <p class="font-medium text-md text-secondary md:text-lg" data-aos="fade-down">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, ex quibusdam!</p>
           </div>
         </div>
 
@@ -391,7 +467,7 @@
                 <a href="#portofolio" class="inline-block text-base hover:text-primary mb-3"> Portofolio </a>
               </li>
               <li>
-                <a href="#gallery" class="inline-block text-base hover:text-primary mb-3"> Galeri </a>
+                <a href="#sertifikat" class="inline-block text-base hover:text-primary mb-3"> Sertifikat </a>
               </li>
               <li>
                 <a href="#blog" class="inline-block text-base hover:text-primary mb-3"> Blog </a>
@@ -465,7 +541,20 @@
       <span class="block h-5 w-5 border-t-2 border-l-2 rotate-45 mt-2"></span>
     </a>
     <!-- Back to Top End -->
+
+    <!-- Script Sweetalert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true, // biar animasinya muncul sekali
+        duration: 2000, // durasi animasinya 2 detik
+      });
+    </script>
+
+    <!-- My Script -->
     <script src="dist/js/script.js"></script>
 
     <script>
